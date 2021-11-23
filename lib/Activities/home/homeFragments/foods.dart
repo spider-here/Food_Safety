@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:food_safety/Activities/Utils/expansionItem.dart';
+import 'package:food_safety/Utils/expansionItem.dart';
+import 'package:food_safety/Utils/textContent.dart';
 
 class foods extends StatefulWidget {
   @override
@@ -10,19 +11,21 @@ class foods extends StatefulWidget {
 }
 
 class foodsState extends State {
-  static String _sampleImgUrl =
-      "https://media.istockphoto.com/photos/social-media-and-digital-online-concept-woman-using-smartphone-picture-id1288271580";
-  static String _sampleContent =
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
-      " sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      " Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-      " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
   List<expansionItem> item = <expansionItem>[
-    expansionItem(header: "Eggs", body: _sampleContent),
-    expansionItem(header: "Fruit & Vegetables", body: _sampleContent),
-    expansionItem(header: "Pasta & Rice", body: _sampleContent),
-    expansionItem(header: "Poultry", body: _sampleContent),
+    expansionItem(header: "Bamboo shoots and cassava", body: textContent.Casava_Bamboo),
+    expansionItem(header: "Casseroles, soups and stews", body: textContent.Casseroles_soups),
+    expansionItem(header: "Bean and seed sprouts", body: textContent.Bean_seed),
+    expansionItem(header: "Beef and lamb", body: textContent.Beef_lamb),
+    expansionItem(header: "Mushrooms", body: textContent.Mushrooms),
+    expansionItem(header: "Eggs", body: textContent.Eggs),
+    expansionItem(header: "Fish", body: textContent.Fish),
+    expansionItem(header: "Fruit and vegetables", body: textContent.Fruit_vegetables),
+    expansionItem(header: "Fermented foods", body: textContent.Fermented_foods),
+    expansionItem(header: "Milk and cheese", body: textContent.Milk_cheese),
+    expansionItem(header: "Pasta and rice", body: textContent.Pasta_rice),
+    expansionItem(header: "Pork", body: textContent.Pork),
+    expansionItem(header: "Rockmelons(canteloupes)", body: textContent.Rockmelons),
+    expansionItem(header: "Turkey", body: textContent.Turkey),
   ];
 
   @override
@@ -43,7 +46,7 @@ class foodsState extends State {
               height: MediaQuery.of(context).size.height / 3.5,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: NetworkImage(_sampleImgUrl), fit: BoxFit.fill)),
+                      image: AssetImage("assets/images/foods.png",), fit: BoxFit.cover)),
             ),
             Padding(
               padding: EdgeInsets.all(10.0),

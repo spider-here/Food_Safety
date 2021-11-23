@@ -15,13 +15,13 @@ class donate extends StatelessWidget{
         physics: BouncingScrollPhysics(),
         child: Container(
           child:
-          Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
             Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 3.5,
+              width: 300.0,
+              height: 300.0,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("assets/images/logo.png"), fit: BoxFit.fill)),
+                      image: AssetImage("assets/images/donate.png"), fit: BoxFit.fill)),
             ),
             Divider(color: Colors.grey, thickness: 1.0,),
             ListTile(

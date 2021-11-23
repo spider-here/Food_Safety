@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:food_safety/Activities/Utils/expansionItem.dart';
+import 'package:food_safety/Utils/expansionItem.dart';
+import 'package:food_safety/Utils/textContent.dart';
 
 class learn extends StatefulWidget {
   @override
@@ -10,19 +11,31 @@ class learn extends StatefulWidget {
 }
 
 class learnState extends State {
-  static String _sampleImgUrl =
-      "https://media.istockphoto.com/photos/social-media-and-digital-online-concept-woman-using-smartphone-picture-id1288271580";
   static String _sampleContent =
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
       " sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       " Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
       " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
   List<expansionItem> item = <expansionItem>[
-    expansionItem(header: "Clean", body: _sampleContent),
-    expansionItem(header: "Chill", body: _sampleContent),
-    expansionItem(header: "Cook", body: _sampleContent),
-    expansionItem(header: "Separate", body: _sampleContent),
+    expansionItem(header: "BBQs and picnics", body: textContent.BBQs),
+    expansionItem(header: "Cooking temperatures", body: textContent.Temperatures),
+    expansionItem(header: "Christmas", body: textContent.Christmas),
+    expansionItem(header: "Chopping board", body: textContent.Chopping),
+    expansionItem(header: "Cross contamination", body: textContent.Contamination),
+    expansionItem(header: "Entertaining", body: textContent.Entertaining),
+    expansionItem(header: "Food storage", body: textContent.Storage),
+    expansionItem(header: "Fridges and freezers", body:textContent.Fridges),
+    expansionItem(header: "Handwashing", body: textContent.Handwashing),
+    expansionItem(header: "Leftovers", body: textContent.Leftovers),
+    expansionItem(header: "Lunchboxes", body: textContent.Lunchboxes),
+    expansionItem(header: "Overseas travelling", body: textContent.Travelling),
+    expansionItem(header: "Power outages", body: textContent.Outages),
+    expansionItem(header: "Shopping", body: textContent.Shopping),
+    expansionItem(header: "Use by and best before dates", body: textContent.Dates),
+    expansionItem(header: "Washing up", body: textContent.Washing),
+    expansionItem(header: "What to do if you get food poisoning", body: textContent.Poisoning),
   ];
 
   @override
@@ -45,11 +58,7 @@ class learnState extends State {
               child: Column(
                 children: [
                   ListTile(
-                    leading: Icon(
-                      Icons.question_answer,
-                      color: Theme.of(context).primaryColor,
-                    ),
-                    title: Text("Most Frequently Asked Questions",
+                    title: Text("Basics",
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     trailing: Icon(Icons.navigate_next),
                     dense: true,
@@ -63,7 +72,7 @@ class learnState extends State {
               height: MediaQuery.of(context).size.height / 3.5,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: NetworkImage(_sampleImgUrl), fit: BoxFit.fill)),
+                      image: AssetImage("assets/images/learn.png",), fit: BoxFit.cover)),
             ),
             Padding(
               padding: EdgeInsets.all(10.0),

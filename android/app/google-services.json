@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "489201583466",
+    "firebase_url": "https://food-safety-8f51a-default-rtdb.firebaseio.com",
+    "project_id": "food-safety-8f51a",
+    "storage_bucket": "food-safety-8f51a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489201583466:android:1e434a0bc807d0b88d5113",
+        "android_client_info": {
+          "package_name": "com.spider.food_safety"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489201583466-f7rs50v87oq35ls2h8aehmrchru85ot6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spider.food_safety",
+            "certificate_hash": "80f0bd21c386025e1482cbd1e38ed08e02b2d90e"
+          }
+        },
+        {
+          "client_id": "489201583466-qp4t1btnr11g47i8dl24in1ev14e73qn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgSt9n6wjmX4hnT3HCvFEpgaGqLAi_baA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489201583466-qp4t1btnr11g47i8dl24in1ev14e73qn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

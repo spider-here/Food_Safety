@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_safety/SubActivities/about.dart';
+import 'package:food_safety/SubActivities/contact.dart';
 import 'package:food_safety/SubActivities/donate.dart';
 
 class more extends StatefulWidget {
@@ -41,6 +43,7 @@ class moreState extends State {
                 color: Colors.black,
               ),
               title: Text("About Us"),
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>about())),
             ),
             Divider(
               color: Colors.grey,
@@ -52,6 +55,7 @@ class moreState extends State {
                 color: Colors.black,
               ),
               title: Text("Contact Us"),
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>contact())),
             ),
             Divider(
               color: Colors.grey,

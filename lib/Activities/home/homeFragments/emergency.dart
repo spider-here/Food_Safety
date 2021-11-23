@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:food_safety/Activities/Utils/expansionItem.dart';
+import 'package:food_safety/Utils/expansionItem.dart';
+import 'package:food_safety/Utils/textContent.dart';
 
 class emergency extends StatefulWidget {
   @override
@@ -10,8 +11,6 @@ class emergency extends StatefulWidget {
 }
 
 class emergencyState extends State {
-  static String _sampleImgUrl =
-      "https://media.istockphoto.com/photos/social-media-and-digital-online-concept-woman-using-smartphone-picture-id1288271580";
   static String _sampleContent =
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
       " sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -19,13 +18,10 @@ class emergencyState extends State {
       " Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
       " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
   List<expansionItem> item = <expansionItem>[
-    expansionItem(header: "Plan ahead", body: _sampleContent),
-    expansionItem(
-        header: "Keep it clean! It's critical to practice basic hygeine",
-        body: _sampleContent),
-    expansionItem(header: "When the power goes off", body: _sampleContent),
-    expansionItem(header: "Floods", body: _sampleContent),
-    expansionItem(header: "After a fire", body: _sampleContent),
+    expansionItem(header: "Fires", body: textContent.Fire),
+    expansionItem(header: "Floods", body: textContent.Floods),
+    expansionItem(header: "Power Outages", body: textContent.Power_outages),
+    expansionItem(header: "Pantry list of non-perishable food ", body: textContent.Non_perishable),
   ];
 
   @override
@@ -57,11 +53,18 @@ class emergencyState extends State {
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 3.5,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: NetworkImage(_sampleImgUrl), fit: BoxFit.fill)),
-            ),
+              color: Colors.white,
+              child: Center(
+              child: Container(
+                width: 200.0,
+                height: 200.0,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image:AssetImage("assets/images/emergency.jpg",), fit: BoxFit.fill)),
+
+              ),
+              ),
+              ),
             Padding(
               padding: EdgeInsets.all(10.0),
               child: Text("How to handle riskier foods",
