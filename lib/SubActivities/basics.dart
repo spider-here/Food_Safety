@@ -1,17 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:food_safety/SubActivities/basics.dart';
 import 'package:food_safety/Utils/expansionItem.dart';
-import 'package:food_safety/Utils/textContent.dart';
 
-class learn extends StatefulWidget {
+class basics extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return learnState();
+    return basicsState();
   }
 }
 
-class learnState extends State {
+class basicsState extends State {
+
   static String _sampleContent =
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
       " sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -20,23 +19,10 @@ class learnState extends State {
       " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
   List<expansionItem> item = <expansionItem>[
-    expansionItem(header: "BBQs and picnics", body: textContent.BBQs),
-    expansionItem(header: "Cooking temperatures", body: textContent.Temperatures),
-    expansionItem(header: "Christmas", body: textContent.Christmas),
-    expansionItem(header: "Chopping board", body: textContent.Chopping),
-    expansionItem(header: "Cross contamination", body: textContent.Contamination),
-    expansionItem(header: "Entertaining", body: textContent.Entertaining),
-    expansionItem(header: "Food storage", body: textContent.Storage),
-    expansionItem(header: "Fridges and freezers", body:textContent.Fridges),
-    expansionItem(header: "Handwashing", body: textContent.Handwashing),
-    expansionItem(header: "Leftovers", body: textContent.Leftovers),
-    expansionItem(header: "Lunchboxes", body: textContent.Lunchboxes),
-    expansionItem(header: "Overseas travelling", body: textContent.Travelling),
-    expansionItem(header: "Power outages", body: textContent.Outages),
-    expansionItem(header: "Shopping", body: textContent.Shopping),
-    expansionItem(header: "Use by and best before dates", body: textContent.Dates),
-    expansionItem(header: "Washing up", body: textContent.Washing),
-    expansionItem(header: "What to do if you get food poisoning", body: textContent.Poisoning),
+    expansionItem(header: "Clean", body: _sampleContent),
+    expansionItem(header: "Chill", body: _sampleContent),
+    expansionItem(header: "Cook", body: _sampleContent),
+    expansionItem(header: "Separate", body: _sampleContent),
   ];
 
   @override
@@ -44,53 +30,23 @@ class learnState extends State {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
-        title: Text("Learn"),
+        title: Text("Basics"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Container(
           child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Card(
-              margin: EdgeInsets.all(0.0),
-              color: Theme.of(context).backgroundColor,
-              elevation: 4.0,
-              child: Column(
-                children: [
-                  ListTile(
-                    title: Text("Basics",
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    trailing: Icon(Icons.navigate_next),
-                    tileColor: Colors.white,
-                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>basics())),
-                  ),
-                  Divider(thickness: 0.5, color: Colors.grey,)
-                ],
-              ),
-            ),
+          Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 3.5,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("assets/images/learn.png",), fit: BoxFit.cover)),
+                      image: AssetImage("assets/images/logo.png",), fit: BoxFit.cover)),
             ),
             Padding(
-              padding: EdgeInsets.all(10.0),
-              child: Text(
-                _sampleContent,
-                textAlign: TextAlign.justify,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(10.0),
-              child: Text("The Basics",
-                  style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)),
-            ),
-            Padding(
-                padding: EdgeInsets.all(20.0),
+                padding: EdgeInsets.fromLTRB(20.0, 40.0, 20.0, 20.0),
                 child: SizedBox(
                     width: double.maxFinite,
                     height: MediaQuery.of(context).size.height,
@@ -110,14 +66,14 @@ class learnState extends State {
                                     (BuildContext context, bool isExpanded) {
                                   return Column(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                      MainAxisAlignment.center,
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                      CrossAxisAlignment.start,
                                       // padding: EdgeInsets.all(10.0),
                                       children: [
                                         Padding(
                                             padding:
-                                                EdgeInsets.only(left: 20.0),
+                                            EdgeInsets.only(left: 20.0),
                                             child: Text(
                                               item.header,
                                               style: TextStyle(

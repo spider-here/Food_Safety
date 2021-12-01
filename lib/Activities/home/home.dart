@@ -39,7 +39,7 @@ class homeState extends State{
             unselectedItemColor: Colors.white24,
             showUnselectedLabels: false,
             elevation: 10.0,
-            selectedIconTheme: IconThemeData(color: Colors.white, size: 35.0),
+            selectedIconTheme: IconThemeData(color: Colors.white, size: 30.0),
             unselectedIconTheme: IconThemeData(color: Colors.white, size: 25.0),
             onTap: (change){setState((){_navIndex=change;_pageController.jumpToPage(change);});},
             items: [

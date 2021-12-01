@@ -7,18 +7,20 @@ class contact extends StatelessWidget{
     return Scaffold(
         backgroundColor: Theme.of(context).backgroundColor,
         appBar: AppBar(
-          title: Text("About Us"),
+          title: Text("Contact Us"),
           centerTitle: true,
         ),
         body: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
-            child: Card(
-                elevation: 4.0,
-                margin: EdgeInsets.all(20.0),
-                child: Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: Text(""),
-                )
+            child: Center(
+             child: Card(
+                 elevation: 4.0,
+                 margin: EdgeInsets.all(20.0),
+                 child: Padding(
+                   padding: EdgeInsets.all(20.0),
+                   child: Text("The contact information comes here.."),
+                 )
+             ),
             )
         )
     );
