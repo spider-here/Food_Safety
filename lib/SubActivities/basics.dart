@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_safety/Utils/expansionItem.dart';
+import 'package:food_safety/Utils/textContent.dart';
 
 class basics extends StatefulWidget {
   @override
@@ -11,18 +12,11 @@ class basics extends StatefulWidget {
 
 class basicsState extends State {
 
-  static String _sampleContent =
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
-      " sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      " Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-      " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-
   List<expansionItem> item = <expansionItem>[
-    expansionItem(header: "Clean", body: _sampleContent),
-    expansionItem(header: "Chill", body: _sampleContent),
-    expansionItem(header: "Cook", body: _sampleContent),
-    expansionItem(header: "Separate", body: _sampleContent),
+    expansionItem(header: "Clean", body: textContent.Clean),
+    expansionItem(header: "Chill", body: textContent.Chill),
+    expansionItem(header: "Cook", body: textContent.Cook),
+    expansionItem(header: "Separate", body: textContent.Separate),
   ];
 
   @override
